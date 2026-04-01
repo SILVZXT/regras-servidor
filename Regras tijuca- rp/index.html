@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tijura RP Docs - Regras do Servidor</title>
+  <style>
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #0b1020;
+      color: #e5e7eb;
+      line-height: 1.6;
+    }
+    header {
+      background: linear-gradient(135deg, #0f172a, #1d4ed8 55%, #0f172a);
+      padding: 48px 20px 36px;
+      text-align: center;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      color: #fff;
+    }
+    header p {
+      max-width: 900px;
+      margin: 12px auto 0;
+      color: #cbd5e1;
+    }
+    .notice {
+      max-width: 1100px;
+      margin: 18px auto 0;
+      padding: 14px 16px;
+      background: rgba(59,130,246,0.12);
+      border: 1px solid rgba(96,165,250,0.25);
+      border-radius: 14px;
+      color: #dbeafe;
+      font-size: 0.95rem;
+    }
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(11,16,32,0.94);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      padding: 12px 16px;
+    }
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    nav a {
+      text-decoration: none;
+      color: #e5e7eb;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.06);
+      font-size: 0.92rem;
+      transition: 0.2s ease;
+    }
+    nav a:hover {
+      background: rgba(255,255,255,0.14);
+      color: #fff;
+    }
+    .container {
+      max-width: 1150px;
+      margin: 0 auto;
+      padding: 28px 16px 60px;
+    }
+    .section {
+      margin-bottom: 22px;
+      background: #111827;
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 22px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.22);
+      overflow: hidden;
+    }
+    .section-header {
+      padding: 18px 20px;
+      background: linear-gradient(90deg, rgba(59,130,246,0.16), rgba(30,41,59,0.2));
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .section-header h2 {
+      margin: 0;
+      font-size: 1.4rem;
+      color: #93c5fd;
+    }
+    .section-body {
+      padding: 18px 20px 22px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 14px;
+    }
+    .card {
+      background: #0f172a;
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 16px;
+      padding: 16px;
+    }
+    .card h3 {
+      margin-top: 0;
+      color: #fff;
+      font-size: 1.05rem;
+    }
+    .card ul {
+      margin: 10px 0 0;
+      padding-left: 18px;
+    }
+    .card li { margin-bottom: 8px; }
+    .badge {
+      display: inline-block;
+      margin-bottom: 10px;
+      padding: 5px 10px;
+      border-radius: 999px;
+      background: #1d4ed8;
+      color: #dbeafe;
+      font-size: 0.8rem;
+    }
+    .warning {
+      background: rgba(239,68,68,0.10);
+      border: 1px solid rgba(248,113,113,0.28);
+      color: #fecaca;
+      border-radius: 16px;
+      padding: 14px 16px;
+    }
+    .muted {
+      color: #94a3b8;
+      font-size: 0.92rem;
+    }
+    details {
+      background: #0f172a;
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 16px;
+      padding: 14px 16px;
+      margin-bottom: 12px;
+    }
+    summary {
+      cursor: pointer;
+      font-weight: bold;
+      color: #fff;
+    }
+    footer {
+      border-top: 1px solid rgba(255,255,255,0.08);
+      text-align: center;
+      padding: 26px 16px 38px;
+      color: #94a3b8;
+    }
+    @media (max-width: 640px) {
+      header h1 { font-size: 1.8rem; }
+      .section-header h2 { font-size: 1.2rem; }
+      .section-body, .section-header { padding: 16px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Tijuca RP </h1>
+    <p>Regras organizadas do servidor em um site único, com seções de condutas gerais, roleplay, meio legal, meio ilegal, sistema de BAC e punições.</p>
+    <div class="notice">
+      LEIA AS REGRAS DA TIJUCA RP O DESCUMPRIMENTO DELAS RESULTARÁ EM PUNIÇÕES.
+    </div>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#objetivo">Objetivo</a></li>
+      <li><a href="#gerais">Condutas Gerais</a></li>
+      <li><a href="#roleplay">Roleplay</a></li>
+      <li><a href="#criancas">Crianças</a></li>
+      <li><a href="#legal">Legal</a></li>
+      <li><a href="#ilegal">Ilegal</a></li>
+      <li><a href="#bac">BAC</a></li>
+      <li><a href="#punicoes">Punições</a></li>
+    </ul>
+  </nav>
+
+  <main class="container">
+    <section class="section" id="objetivo">
+      <div class="section-header"><h2>Objetivo do Documento</h2></div>
+      <div class="section-body">
+        <p>Este documento estabelece as diretrizes gerais, normas administrativas e regras de convivência da cidade Tijuca Roleplay, operando no modelo Hard Roleplay, priorizando realismo, imersão e responsabilidade.</p>
+        <p>A leitura completa é obrigatória. O descumprimento destas regras poderá resultar em punições administrativas, incluindo banimento por tempo indeterminado.</p>
+        <p>Ao entrar na cidade, todo jogador declara estar ciente e de acordo com todas as regras aqui descritas.</p>
+      </div>
+    </section>
+
+    <section class="section" id="gerais">
+      <div class="section-header"><h2>Condutas Gerais</h2></div>
+      <div class="section-body">
+        <div class="warning"><strong>Aviso:</strong> uso de programas, ferramentas, scripts ou qualquer recurso externo que gere vantagem indevida pode resultar em banimento permanente.</div>
+        <div class="grid" style="margin-top:14px;">
+          <div class="card">
+            <span class="badge">Informações Gerais</span>
+            <ul>
+              <li>Discriminação e preconceito são proibidos e não tolerados sob qualquer justificativa.</li>
+              <li>Forçar interação com streamers sem conhecê-los in-game é definido como metagaming.</li>
+              <li>Sair do roleplay é proibido; deve-se separar o personagem do mundo real.</li>
+              <li>Roubo de veículos em rota de farm ilegal é proibido.</li>
+              <li>Roubo de veículos de jogadores por agressão ou armas é proibido, exceto se entrar pelo passageiro via animação de soco.</li>
+              <li>É proibido realizar chamados de serviço com intenção de sequestrar ou matar quem atende.</li>
+              <li>Modificações visuais ou sonoras que deem vantagem são proibidas.</li>
+              <li>Após ser nocauteado intencionalmente, você esquece o ocorrido, mesmo se reanimado.</li>
+              <li>Máximo de duas pessoas no porta-malas.</li>
+              <li>Atividades ilegais são proibidas enquanto registrado em empregos legais.</li>
+              <li>É proibido reanimar nocauteado para roubar, cobrar ou forçar informações.</li>
+              <li>Amor à vida é obrigatório.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <span class="badge">Regras Gerais</span>
+            <ul>
+              <li>É vedada a utilização, exploração ou aproveitamento de bugs, falhas ou glitches do sistema, seja para benefício próprio ou de terceiros.</li>
+              <li>Quando um personagem for interpretado como feminino ou masculino, essa identidade deve ser integralmente respeitada dentro do roleplay.</li>
+              <li>O jogador deve manter o roleplay até sua conclusão. Qualquer denúncia deve ser feita apenas após o encerramento da ação.</li>
+              <li>É estritamente proibido utilizar o comando <strong>/gg</strong> para fugir de punições em ações em andamento.</li>
+              <li>É proibida qualquer compra, venda, troca ou negociação envolvendo contas, personagens, itens, moedas ou recursos do jogo fora do ambiente oficial do servidor.</li>
+              <li>Não é permitido o uso de nitro automotivo em veículos de serviços públicos, emergência ou meios de transporte ligados a atividades legais.</li>
+              <li>É proibida qualquer alteração visual ou sonora que conceda vantagem indevida ou interfira na dinâmica do RP.</li>
+              <li>Não é permitido recusar, dificultar ou impedir atendimento a corporações ou organizações quando estiver exercendo função de liderança em estabelecimentos essenciais.</li>
+              <li>É proibida a prática conhecida como “Caixa Dois”, incluindo acesso indevido, desvio ou apropriação de bens, valores ou itens de cofres, baús ou sistemas internos.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="roleplay">
+      <div class="section-header"><h2>Regras de Roleplay</h2></div>
+      <div class="section-body">
+        <div class="grid">
+          <div class="card">
+            <h3>PowerGaming (PG)</h3>
+            <ul>
+              <li>Em fugas, é permitido usar rampas e saltos com veículos no geral.</li>
+              <li>Fica proibido o uso excessivo de props, escadas e muretas.</li>
+              <li>Não há restrição para uso de veículos em terrenos off-road.</li>
+              <li>Abusos de mecânica do jogo de forma não realista se enquadram em PG.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>MetaGaming</h3>
+            <ul>
+              <li>É proibido usar informações obtidas fora do contexto do roleplay, como Discord, lives ou chat.</li>
+              <li>Qualquer informação obtida fora da vivência do personagem é considerada metagaming.</li>
+              <li>É proibido assistir transmissões ao vivo enquanto estiver em roleplay.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>VDM / RDM</h3>
+            <ul>
+              <li>VDM é usar veículos como arma para matar, atropelar ou causar danos deliberados.</li>
+              <li>RDM é matar um jogador sem motivo válido; a interação deve ser prioridade.</li>
+              <li>Não se pode matar sem ao menos conversar ou tentar render alguém.</li>
+              <li>Discussões momentâneas na rua não justificam matar outra pessoa.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Combat Logging (CL)</h3>
+            <ul>
+              <li>Desconectar durante fugas, sequestros, trocas de tiros ou outras ações é proibido.</li>
+              <li>Em ações fechadas, após queda imprevista, não se deve voltar imediatamente para continuar a ação.</li>
+              <li>O jogador deve enviar print do crash no canal correspondente.</li>
+              <li>Punições podem incluir banimento e limpeza de inventário sem aviso prévio.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Conduta e Comportamento</h3>
+            <ul>
+              <li><strong>Dark RP:</strong> tolerância zero para assédio, LGBTQIA+fobia, racismo, terrorismo, tortura ou comportamento tóxico/preconceituoso.</li>
+              <li><strong>Anti RP:</strong> comportamentos que prejudicam o desenvolvimento saudável do roleplay são proibidos.</li>
+              <li><strong>Power RP:</strong> forçar RP em cima dos outros apenas para gerar perseguição ou conteúdo é proibido.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Sistemas e Mecânicas</h3>
+            <ul>
+              <li><strong>Esquecimento:</strong> se for nocauteado e finalizado, você esquece todo o ocorrido da cena.</li>
+              <li><strong>Safezones:</strong> hospitais são zonas de paz; qualquer crime nesses locais é proibido.</li>
+              <li><strong>Chamados:</strong> é proibido chamar polícia ou SAMU para emboscar ou sequestrar profissionais.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Facção e Polícia</h3>
+            <ul>
+              <li>Membros de facção devem usar a cor do grupo em todas as ações.</li>
+              <li>Corrupção policial é estritamente proibida.</li>
+              <li>Revistas só podem ser feitas em flagrante ou com teste de resíduo de pólvora positivo.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="criancas">
+      <div class="section-header"><h2>Regras para Personagens Crianças</h2></div>
+      <div class="section-body">
+        <div class="warning"><strong>Importante:</strong> o descumprimento dessas regras pode punir tanto o personagem infantil quanto o indivíduo envolvido na infração.</div>
+        <div class="grid" style="margin-top:14px;">
+          <div class="card">
+            <ul>
+              <li>Personagens infantis não podem portar, manusear, comercializar ou ter vínculo com armas de fogo, armas brancas ou objetos usados como armamento.</li>
+              <li>Adultos não podem mostrar, entregar, ameaçar ou expor crianças a armas, munições ou equipamentos bélicos.</li>
+              <li>Crianças não podem comparecer em favelas, salvo quando não houver faca ou armas de forma explícita.</li>
+              <li>É proibida qualquer participação em conteúdo sexual, erótico, sugestivo ou inadequado.</li>
+              <li>A linguagem deve ser compatível com a idade do personagem.</li>
+              <li>Crianças não podem consumir, transportar ou negociar álcool, drogas ou substâncias ilícitas.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <ul>
+              <li>É proibido participar, auxiliar ou se associar a práticas criminosas.</li>
+              <li>Personagens infantis não podem conduzir veículos motorizados.</li>
+              <li>A interpretação deve refletir comportamentos adequados à faixa etária.</li>
+              <li>Crianças não podem ser inseridas em cenas de tortura, violência extrema, execuções ou mortes intencionais.</li>
+              <li>Não podem integrar forças policiais, facções, gangues ou grupos armados.</li>
+              <li>É proibida a participação em roubos, assaltos, sequestros, invasões ou qualquer atividade ilícita.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <ul>
+              <li>O RP com crianças deve priorizar escola, família, lazer, esportes e brincadeiras.</li>
+              <li>Objetos semelhantes a armas só podem ser usados como brinquedos de forma claramente interpretada.</li>
+              <li>É proibida qualquer sexualização de personagens infantis.</li>
+              <li>O jogador deve interpretar com maturidade, sem usar a condição infantil para trollagem ou quebra de RP.</li>
+              <li>Personagens infantis não podem participar de flertes, insinuações românticas ou relacionamentos.</li>
+              <li>É proibido divulgar imagens, vídeos ou clipes com cenas inadequadas envolvendo personagens infantis.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="fuga">
+      <div class="section-header"><h2>Fuga e Perseguição</h2></div>
+      <div class="section-body">
+        <div class="grid">
+          <div class="card">
+            <ul>
+              <li>É autorizado realizar resgate por troca de veículo durante perseguições; nesses casos, o Código 3 fica liberado.</li>
+              <li>O “desce e quebra” só é permitido quando não houver mais possibilidade de continuidade da fuga.</li>
+              <li>Disparos de dentro do veículo ao iniciar abordagem podem ser caracterizados como RDM.</li>
+              <li>Durante fugas limpas, é proibida emboscada com intenção letal, salvo após troca de veículo.</li>
+              <li>Colidir propositalmente contra viaturas para romper cerco libera Código 3, incluindo disparos direcionados aos pneus.</li>
+            </ul>
+          </div>
+          <div class="card muted">
+            Parte do conteúdo desta seção aparecia incompleta na documentação pública. Você pode complementar aqui se quiser adicionar mais regras específicas de pinote, cerco ou acompanhamento.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="legal">
+      <div class="section-header"><h2>Meio Legal</h2></div>
+      <div class="section-body">
+        <details open>
+          <summary>Regras Gerais</summary>
+          <ul>
+            <li>Em ações com reféns, a prioridade de negociação é da Polícia Civil. Na ausência dela, assume o agente de maior patente presente.</li>
+            <li>O policial pode apreender exclusivamente itens de natureza ilegal.</li>
+            <li>Toda abordagem policial deve possuir fundamento plausível dentro do roleplay.</li>
+            <li>O motivo da abordagem deve ser informado claramente logo no início da interação.</li>
+            <li>Agentes devem manter conduta profissional, sem palavras de baixo calão, atitudes desrespeitosas ou incoerência com o RP.</li>
+          </ul>
+        </details>
+
+        <details>
+          <summary>Regras de Acompanhamento</summary>
+          <ul>
+            <li>O acompanhamento policial pode durar no máximo 5 minutos, salvo autorização superior ou evolução grave da ocorrência.</li>
+            <li>O Código 3 pode ser autorizado quando o suspeito ultrapassar 5 minutos de acompanhamento, cometer PG na fuga, atropelar cidadãos ou policiais, ou colidir propositalmente contra viaturas.</li>
+            <li>O Código 5 pode ser liberado quando os indivíduos estiverem armados ou efetuarem disparos contra a guarnição ou terceiros.</li>
+            <li>Se a polícia perder o contato visual, terá até 5 minutos para localizar o veículo suspeito.</li>
+          </ul>
+        </details>
+
+        <details>
+          <summary>Regras de Patrulhamento</summary>
+          <ul>
+            <li>Sempre anunciar na central o início do patrulhamento seguindo a modulação padrão.</li>
+            <li>Subdivisões de elite da PM podem realizar RO em favelas com no mínimo 4 oficiais, respeitando o uso progressivo da força.</li>
+            <li>ROCAM pode iniciar atividades com pelo menos uma QSV de 4 rodas em serviço.</li>
+            <li>O patrulhamento deve começar com no mínimo dois oficiais na mesma QSV.</li>
+          </ul>
+        </details>
+
+        <details>
+          <summary>Prisões e Apreensões</summary>
+          <ul>
+            <li>A Polícia Civil é responsável por prisões formais e apreensão de itens, especialmente ilegais.</li>
+            <li>A Polícia Militar realiza abordagem, contenção e condução do suspeito, apresentando-o depois à Polícia Civil.</li>
+          </ul>
+          <p class="muted">A parte final desta seção não estava totalmente visível no conteúdo público carregado.</p>
+        </details>
+      </div>
+    </section>
+
+    <section class="section" id="ilegal">
+      <div class="section-header"><h2>Meio Ilegal</h2></div>
+      <div class="section-body">
+        <details open>
+          <summary>Regras Gerais</summary>
+          <ul>
+            <li>Favelas não são áreas de execução livre. Qualquer ação letal exige interação e contexto RP prévios.</li>
+            <li>Lideranças de facções ou organizações criminosas só podem ser exercidas com autorização expressa da administração.</li>
+          </ul>
+        </details>
+
+        <details open>
+          <summary>Regras de Ações</summary>
+          <ul>
+            <li>É estritamente proibido ficar marcando o blip.</li>
+            <li>Marcar ação e não comparecer gera advertência e multa para a facção solicitante.</li>
+            <li>Cada facção possui limite semanal de ações fechadas.</li>
+            <li>Joalheria: 1 por semana.</li>
+            <li>Fleeca: 3 por semana.</li>
+            <li>Açougue: 2 por semana.</li>
+            <li>Galinheiro: 2 por semana.</li>
+            <li>Banco Central: 1 por semana.</li>
+            <li>Banco Paleto: 2 por semana.</li>
+            <li>Ao final de ação de grande porte, todos os assaltantes ficam procurados por 7 dias.</li>
+            <li>Antes de ação grande, é obrigatório tirar foto de todos os assaltantes.</li>
+            <li>Ações de grande porte precisam reservar horário.</li>
+          </ul>
+        </details>
+
+        <div class="grid">
+          <div class="card">
+            <h3>Ações Pequenas</h3>
+            <p class="muted">Não é necessário reservar horário, mas é obrigatório registrar em ações realizadas.</p>
+            <ul>
+              <li><strong>Loja de Armas:</strong> 2 bandidos, 3 policiais, apenas pistola, sem negociação, reféns proibidos.</li>
+              <li><strong>Lojinha:</strong> 2 a 3 bandidos, 4 a 5 policiais, apenas pistola, sem negociação, reféns proibidos.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Ações Médias</h3>
+            <p class="muted">Não é necessário reservar horário, mas é obrigatório registrar em ações realizadas.</p>
+            <ul>
+              <li><strong>Galinheiro:</strong> 6 a 9 bandidos, 9 a 12 policiais, submetralhadora e fuzil, negociação obrigatória, até 2 reféns.</li>
+              <li><strong>Açougue:</strong> 6 a 9 bandidos, 9 a 12 policiais, submetralhadora e fuzil, perímetro com bandidos dentro e policiais fora em P1 e P2.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Ações Grandes</h3>
+            <p class="muted">Obrigatório reservar horário e registrar em ações realizadas.</p>
+            <ul>
+              <li><strong>Banco Central:</strong> 9 a 16 bandidos, 14 a 21 policiais, submetralhadora e fuzil, 4 reféns obrigatórios, negociação obrigatória.</li>
+              <li><strong>Banco Paleto:</strong> 8 a 12 bandidos, 13 a 17 policiais.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="bac">
+      <div class="section-header"><h2>Sistema de BAC</h2></div>
+      <div class="section-body">
+        <p><strong>SISTEMA DE BAC — Briga de Área Controlada</strong></p>
+        <ul>
+          <li>Para realizar um BAC em um QG inimigo é obrigatório ter motivo plausível.</li>
+          <li>É necessário possuir provas em vídeo ou clipe.</li>
+          <li>O material deve ser enviado no canal oficial de BAC.</li>
+          <li>Ambas as facções devem ter ciência da invasão.</li>
+          <li>O BAC só é válido após aprovação da administração.</li>
+          <li>Sem esses requisitos, o BAC é considerado ilegal e sujeito a punições severas.</li>
+          <li>As duas facções precisam ter quantidade mínima de membros online para o BAC começar.</li>
+          <li>A facção que dominar o blip do QG vence.</li>
+          <li>A vencedora recebe 5 milhões retirados do painel da facção derrotada.</li>
+          <li>A facção derrotada fica 1 hora fora do QG.</li>
+          <li>Durante esse período ocorre R.O. e pacificação do local.</li>
+          <li>Após a pacificação, a facção pode retornar ao território.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="punicoes">
+      <div class="section-header"><h2>Punições</h2></div>
+      <div class="section-body">
+        <div class="grid">
+          <div class="card">
+            <h3>Sistema Progressivo</h3>
+            <ul>
+              <li><strong>Advertência Verbal:</strong> aplicada em casos leves, com caráter educativo e registro permanente no histórico.</li>
+              <li><strong>Primeira Advertência:</strong> registro formal de infração; expira após 30 dias de boa conduta.</li>
+              <li><strong>Segunda Advertência:</strong> suspensão imediata da whitelist por 24 horas.</li>
+              <li><strong>Terceira Advertência:</strong> reincidência contumaz, resultando em banimento permanente da conta.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Punições em Facções</h3>
+            <ul>
+              <li>A administração prioriza que conflitos sejam resolvidos dentro do roleplay.</li>
+              <li><strong>2ª Advertência:</strong> remoção de farm e craft por 48 horas.</li>
+              <li><strong>3ª Advertência:</strong> remoção do mapa da facção por 72 horas.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    Site de regras inspirado na documentação pública do servidor. Edite este arquivo para ajustar visual, nomes ou completar trechos específicos.
+  </footer>
+</body>
+</html>
